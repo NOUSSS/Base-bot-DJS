@@ -1,1 +1,4 @@
-{ "token": "TOKEN DE VOTRE BOT", "prefix": "VOTRE PREFIX"}
+{ 
+    "token": "TOKEN DE VOTRE BOT", 
+    "prefix": "VOTRE PREFIX"
+}

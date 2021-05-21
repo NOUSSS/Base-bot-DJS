@@ -12,7 +12,7 @@ for (dir of commandFile) {
     const commands = readdirSync(`./cmds/${dir}`).filter(f => f.endsWith('.js'));
     for (command of commands) {
         const cmd = require(`./cmds/${dir}/${command}`);
-        if (cmd.name) { client.commands.set(cmd.name, cmd); console.log(`[COMMANDS]`.red + ` > ${cmd.name}` + ` chargé.`.red) } else { continue; };
+        if (cmd.name) { client.commands.set(cmd.name, cmd); console.log(`[COMMANDS]`.red + ` > ${cmd.name}` + ` chargé.`.red); } else { continue; };
     }
 }
 
