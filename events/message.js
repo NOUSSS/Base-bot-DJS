@@ -8,7 +8,7 @@ module.exports = {
         const args = message.content.slice(prefix.length).trim().split(/ +/g);
         const cmd = args.shift().toLowerCase();
         let command = client.commands.get(cmd) || client.commands.find(a => a.aliases && a.aliases.includes(cmd));
-        if (!command) return message.channel.send(`La commande \`${cmd}\` n'éxiste pas.`);
+        if (!command) return message.channel.send(`La commande \`${cmd}\` n'éxiste pas.`).then(m => m.delete({ timeout: 5000 }));
         command.run(client, message, args);
 
     },

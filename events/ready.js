@@ -4,7 +4,7 @@ module.exports = {
 
         console.clear();
         console.log(`[CLIENT]`.red + ` Connecté sur > ` + `${client.user.tag} (${client.user.id})`.red);
-        client.user.setActivity('PRESENCE');
-        
+        client.user.setActivity('NouSs', { type: 'WATCHING' });
+
     },
 };
