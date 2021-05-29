@@ -8,6 +8,6 @@ module.exports = (client) => {
         for (command of commands) {
             const cmd = require(`../commands/${dir}/${command}`);
             if (cmd.name) { client.commands.set(cmd.name, cmd); console.log(`[COMMANDS]`.red + ` > ${cmd.name}` + ` chargé.`.red); } else { continue; };
-        }
-    } 
+        };
+    }; 
 };
