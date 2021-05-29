@@ -2,6 +2,7 @@ const { readdirSync } = require('fs');
 const colors = require('colors');
 
 module.exports = (client) => {
+    
     const eventFile = readdirSync('./events');
         for (let event of eventFile) {
             const e = require(`../events/${event}`);
@@ -10,4 +11,5 @@ module.exports = (client) => {
             console.log(`[EVENTS]`.red + ` > ${e.name}` + ` chargé.`.red);
         } else { continue; };
     };
+
 };
